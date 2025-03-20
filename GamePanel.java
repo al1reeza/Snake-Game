@@ -94,6 +94,5 @@ public class GamePanel extends JPanel implements Runnable {
 			this.food = new Food(this);
 			food.ateFood= false;
 		}
- 		System.out.println(snake.tail.size());
 	}
 }
