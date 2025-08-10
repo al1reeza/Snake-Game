@@ -1,33 +1,129 @@
-# Snake-Game
-With the help of 2D game development principals, this classic 2D Snake Game is a perfect flashback to old-school gaming. In this game, the player controls a continuously moving snake that grows longer each time it eats food, while carefully avoiding collisions with its own body and the walls of the playing area.
+# Snake Game 🐍
 
-  As a passionate programmer, I embarked on a project to recreate the timeless Snake Game using Java, showcasing my skills in 2D game development, object-oriented programming, and problem-solving. This project not only allowed me to bring a classic arcade game that I have always loved back to life but also helped me master key concepts in game design, real-time rendering, and user input handling. Below, I’ll walk you through the technical aspects of the game, the challenges I overcame, and the skills I developed along the way.
+A classic Snake game implementation in Java using Swing graphics. Control the snake to eat food, grow longer, and avoid collisions!
 
-The Game:
-The Snake Game is a classic arcade-style game where the player controls a snake that grows in length by consuming food while avoiding collisions with walls and its own body. My version of the game features:
-  1-Smooth Snake Movement: The snake moves seamlessly across a grid-based playing field, with its direction controlled by keyboard inputs (W, A, S, D).
-  2-Dynamic Tail Growth: Each time the snake eats food, its tail grows longer, increasing the difficulty as the game progresses.
-  3-Collision Detection: The game ends if the snake collides with the walls or its own body, ensuring a challenging and engaging experience.
-  4-Random Food Generation: Food spawns at random locations on the grid, encouraging strategic movement and planning.
+## Features
 
-Technical Implementation:
-To build this game, I leveraged Java’s Swing library for rendering graphics and handling user input. Here’s a breakdown of the key components:
-  1-GamePanel Class: Acts as the main game window, handling rendering, updates, and the game loop. Uses a thread-based game loop to ensure smooth animation and consistent frame updates.
-  2-Snake Class: Manages the snake’s movement, tail growth, and collision detection. Updates the snake’s direction based on keyboard inputs and ensures its tail follows its head.
-  3-Food Class: Handles the placement of food on the grid and detects when the snake consumes it. Respawns food at random locations after each consumption.
-  4-KeyHandler Class: Listens for keyboard inputs and updates the snake’s direction in real-time.
-  5-Main Class: Initializes the game window and starts the game thread.
+- **Classic Snake Gameplay**: Navigate the snake around the screen to collect food
+- **Growing Mechanics**: Snake grows longer each time it eats food
+- **Collision Detection**: Game ends when snake hits walls or itself
+- **Smooth Animation**: Runs at 7 FPS for optimal gameplay experience
+- **Keyboard Controls**: WASD keys for directional movement
 
-Challenges and Solutions:
-  1-Smooth Movement and Tail Growth: Implementing the snake’s tail growth required dynamically updating the positions of each tail segment. I solved this by using an ArrayList to store the tail segments and updating their positions iteratively.
- 2 -Collision Detection: Detecting collisions with walls and the snake’s own body was a critical challenge. I implemented a grid-based collision system that checks the snake’s coordinates against the grid boundaries and its tail segments.
-  3-Real-Time Input Handling: Ensuring the snake responded instantly to keyboard inputs was achieved using Java’s KeyListener interface, which captures key presses and updates the snake’s direction accordingly.
+## How to Play
 
-Skills Mastered:
-Through this project, I mastered:
-  1-Java Programming: Deepened my understanding of Java, particularly in using Swing, threads, and OOP principles.
-  2-2D Game Development: Gained hands-on experience in designing and implementing a 2D game from scratch.
-  3-Problem-Solving: Learned to break down complex problems into manageable components, such as movement logic and collision detection.
-  4-Debugging and Optimization: Improved my ability to identify and fix bugs while optimizing performance for smooth gameplay.
+1. Use **WASD** keys to control the snake:
+   - **W**: Move up
+   - **A**: Move left
+   - **S**: Move down
+   - **D**: Move right
 
-  Thank you for taking your time. You can find the implementation of my code here!
+2. Guide the snake to eat the red food squares
+3. Each food eaten makes the snake grow longer
+4. Avoid hitting the walls or the snake's own body
+5. Try to achieve the highest score possible!
+
+## Game Mechanics
+
+- **Grid Size**: 35x35 tiles
+- **Tile Size**: 20x20 pixels
+- **Game Speed**: 7 FPS
+- **Food Spawning**: Random locations on the grid
+- **Growth**: Snake length increases by 1 segment per food eaten
+
+## Project Structure
+
+```
+src/
+├── Main/
+│   ├── Main.java           # Entry point and window setup
+│   └── GamePanel.java      # Main game loop and rendering
+├── Entity/
+│   ├── Entity.java         # Base entity class
+│   ├── Snake.java          # Snake logic and behavior
+│   └── Food.java           # Food generation and consumption
+└── KeyHandler/
+    └── KeyHandler.java     # Keyboard input handling
+```
+
+## Class Overview
+
+### Main Classes
+- **`Main`**: Creates the game window and starts the application
+- **`GamePanel`**: Handles the game loop, rendering, and coordinates game objects
+
+### Entity Classes
+- **`Entity`**: Base class for game objects with position and length properties
+- **`Snake`**: Implements snake movement, growth, and collision detection
+- **`Food`**: Manages food placement and consumption logic
+
+### Input Handling
+- **`KeyHandler`**: Processes keyboard input for snake movement
+
+## Requirements
+
+- Java 8 or higher
+- No external dependencies (uses built-in Java Swing)
+
+## Installation & Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/snake-game.git
+   cd snake-game
+   ```
+
+2. **Compile the Java files**:
+   ```bash
+   javac -d bin src/**/*.java
+   ```
+
+3. **Run the game**:
+   ```bash
+   java -cp bin Main.Main
+   ```
+
+Alternatively, if using an IDE like Eclipse or IntelliJ IDEA:
+1. Import the project
+2. Run the `Main.java` file
+
+## Game Screenshots
+
+The game features:
+- Green background playing field
+- Black snake segments
+- Red food squares
+- Clean, minimalist graphics
+
+## Technical Details
+
+- **Graphics**: Java 2D Graphics (Graphics2D)
+- **Game Loop**: Fixed timestep at 7 FPS
+- **Collision Detection**: Grid-based collision system
+- **Memory Management**: Efficient tail management using ArrayList
+
+## Future Enhancements
+
+Potential improvements could include:
+- Score tracking and high scores
+- Difficulty levels with varying speeds
+- Sound effects
+- Different food types with bonus points
+- Pause functionality
+- Better graphics and animations
+
+## Contributing
+
+Feel free to fork this project and submit pull requests for any improvements or bug fixes!
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Author
+
+Created as a learning project to demonstrate Java game development concepts using Swing.
+
+---
+
+Enjoy playing Snake! 🎮
