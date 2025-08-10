@@ -102,16 +102,6 @@ The game features:
 - **Collision Detection**: Grid-based collision system
 - **Memory Management**: Efficient tail management using ArrayList
 
-## Future Enhancements
-
-Potential improvements could include:
-- Score tracking and high scores
-- Difficulty levels with varying speeds
-- Sound effects
-- Different food types with bonus points
-- Pause functionality
-- Better graphics and animations
-
 ## Contributing
 
 Feel free to fork this project and submit pull requests for any improvements or bug fixes!
