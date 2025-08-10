@@ -59,7 +59,6 @@ public class Snake{
 	// Determines what the direction is based on the keyboard input
 	public void whatIsDirection() {
 		// We want to figure out if key is pressed or not to know how our snake should move
-//		isPressed();
 		if(keyH.up == true) {
 			direction = "up";
 			this.xSpeed = 0;
@@ -98,7 +97,6 @@ public class Snake{
 		this.xLocation += this.xSpeed;
 		this.yLocation += this.ySpeed;
 		collission();
-		
 	}
 		
 	public void draw(Graphics2D g2) {
@@ -109,6 +107,7 @@ public class Snake{
 	}
 	
 	public void collission() {
+		
 		for(int i = 0; i < length; i++) {
 			for(int j = i + 1; j < length; j++) {
 				if((int)(gp.snake.tail.get(i).screenX / gp.tileSize) == (int)(gp.snake.tail.get(j).screenX /gp.tileSize) &&
@@ -118,6 +117,7 @@ public class Snake{
 				}
 			}
 		}
+		
 		if(this.xLocation > gp.maxScreenWidth || this.xLocation < 0 || this.yLocation < 0 || this.yLocation > gp.maxScreenHeight) {
 			JOptionPane.showMessageDialog(null, "GAME OVER", "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
 			System.exit(0);
