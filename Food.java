@@ -25,17 +25,18 @@ public class Food {
 	}
 
 	// This method draws the food objects that the snakes can eat to make sure they get bigger
-		public void drawFood(Graphics2D g2) {
-			g2.setColor(Color.red);
-			g2.fillRect(this.screenX, this.screenY, gp.tileSize, gp.tileSize);
+	public void drawFood(Graphics2D g2) {
+		g2.setColor(Color.red);
+		g2.fillRect(this.screenX, this.screenY, gp.tileSize, gp.tileSize);
 	}
 	
 	//	The snake eats the food
-		public void eatFood() {
-			if((int)(gp.snake.xLocation / gp.tileSize) == (int)(gp.food.screenX /gp.tileSize) &&
-					(int)(gp.snake.yLocation / gp.tileSize) == (int)(gp.food.screenY / gp.tileSize)){
-					gp.snake.length++;
-					ateFood = true;
-				}
+	public void eatFood() {
+		if((int)(gp.snake.xLocation / gp.tileSize) == (int)(gp.food.screenX /gp.tileSize) &&
+		   		(int)(gp.snake.yLocation / gp.tileSize) == (int)(gp.food.screenY / gp.tileSize)){
+			gp.snake.length++;
+			ateFood = true;
 		}
+	}
 }
+
